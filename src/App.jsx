@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-
-import poweredBy from "./powered-by-vitawind-dark.png";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,63 +10,9 @@ function App() {
   return (
     <div className="text-center selection:bg-green-900">
       <Header />
-      <nav>
-        <ul>
-          <li>
-            <a href="">kdj</a>
-          </li>
-          <li>
-            <a href="">skf</a>
-          </li>
-          <li>
-            <a href="">slk</a>
-          </li>
-          <li>
-            <a href="">dff</a>
-          </li>
-        </ul>
-        
-      </nav>
-      <main>
-        <p className="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent">
-          Vite + React + Tailwindcss v3
-        </p>
-        <p className="mt-3">
-          <button
-            type="button"
-            className="my-6 rounded bg-gray-300 px-2 py-2 text-[#282C34] transition-all hover:bg-gray-200"
-            onClick={() => setCount((count) => count + 1)}
-          >
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code className="text-[#8d96a7]">App.jsx</code> and save to test
-          HMR updates.
-        </p>
-      </main>
-      <footer>
-        <p className="mt-3 flex gap-3 text-center text-[#8d96a7]">
-          <a
-            className="text-[#61dafb] transition-all hover:text-blue-400"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="text-[#61dafb] transition-all hover:text-blue-400"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-        <img src={poweredBy} className="mx-auto my-8" alt="powered-by" />
-      </footer>
+      <Nav/>
+      <Main count={count} setCount={ setCount} />
+      <Footer/>
     </div>
   );
 }

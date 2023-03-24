@@ -1,5 +1,5 @@
-import React from 'react'
-import logo from "../../logo.svg";
+import React from "react";
+import logo from "../assets/logo.svg";
 function Header() {
   return (
     <header className="flex min-h-screen flex-col items-center justify-center bg-[#282c34] text-white">
@@ -12,4 +12,4 @@ function Header() {
   );
 }
 
-export default header
+export default Header;
